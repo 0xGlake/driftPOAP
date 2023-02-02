@@ -14,16 +14,16 @@ import {
     WalletMultiButton
 } from '@solana/wallet-adapter-react-ui';
 import { clusterApiUrl } from '@solana/web3.js';
-import { MetaplexProvider } from './MetaplexProvider';
-import { ShowNFTs } from './ShowNFTs';
-import { MintNFTs } from './MintNFTs';
+import { MetaplexProvider } from '../components/MetaplexProvider';
+import { MintNFTs } from '../components/MintNFTs';
 import '@solana/wallet-adapter-react-ui/styles.css';
 
 export default function Home() {
 
   const [network, setNetwork] = useState(WalletAdapterNetwork.Mainnet);
+  
+  const endpoint = useMemo(() => process.env.NEXT_PUBLIC_RPC_URL, [network]); // eslint-disable-next-line no-use-before-define
 
-  const endpoint = useMemo(() => process.env.NEXT_PUBLIC_RPC_URL, [network]);
 
   const wallets = useMemo(
       () => [
