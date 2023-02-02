@@ -21,9 +21,9 @@ import '@solana/wallet-adapter-react-ui/styles.css';
 
 export default function Home() {
 
-  const [network, setNetwork] = useState(WalletAdapterNetwork.Devnet);
+  const [network, setNetwork] = useState(WalletAdapterNetwork.Mainnet);
 
-  const endpoint = useMemo(() => clusterApiUrl(network), [network]);
+  const endpoint = useMemo(() => process.env.NEXT_PUBLIC_RPC_URL, [network]);
 
   const wallets = useMemo(
       () => [
@@ -38,21 +38,14 @@ export default function Home() {
 
   const handleChange = (event) => {
     switch(event.target.value){
-      case "devnet":
-        setNetwork(WalletAdapterNetwork.Devnet);
-        break;
       case "mainnet":
         setNetwork(WalletAdapterNetwork.Mainnet);
       break;
-      case "testnet":
-        setNetwork(WalletAdapterNetwork.Testnet);
-        break;
       default:
-        setNetwork(WalletAdapterNetwork.Devnet);
+        setNetwork(WalletAdapterNetwork.Mainnet);
         break;
     }
   };
-
 
   return (
     <div>
@@ -71,4 +64,3 @@ export default function Home() {
   </div>
   );
 }
-
