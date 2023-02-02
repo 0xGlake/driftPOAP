@@ -41,6 +41,12 @@ export default function Home() {
       case "mainnet":
         setNetwork(WalletAdapterNetwork.Mainnet);
       break;
+      case "devnet":
+        setNetwork(WalletAdapterNetwork.Devnet);
+        break;
+      case "testnet":
+        setNetwork(WalletAdapterNetwork.Testnet);
+        break;
       default:
         setNetwork(WalletAdapterNetwork.Mainnet);
         break;
