@@ -1,0 +1,23 @@
+{
+  "name": "Drift Summer Camp POAP",
+  "symbol": "DPOAP",
+  "description": "A POAP to show off you were at the Melbourne hacker house",
+  "image": "0.png",
+  "attributes": [
+    {
+      "event": "Drift Summer Camp",
+      "location": "Melbourne, Australia",
+      "year": "2023",
+      "trait_type": "POAP",
+      "value": "Priceless"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "0.png",
+        "type": "image/png"
+      }
+    ]
+  }
+}

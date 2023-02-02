@@ -1,0 +1,15 @@
+{
+  "name": "Drift Summer Camp POAP",
+  "symbol": "DPOAP",
+  "description": "A POAP to show off to all your mates that haven't been to Melbourne",
+  "image": "collection.png",
+  "attributes": [],
+  "properties": {
+    "files": [
+      {
+        "uri": "collection.png",
+        "type": "image/png"
+      }
+    ]
+  }
+}
