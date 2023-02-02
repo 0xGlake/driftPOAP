@@ -51,21 +51,20 @@ export const MintNFTs = ({ onClusterChange }) => {
   }
 
   const onClick = async () => {
+    try {
     const { nft } = await metaplex.candyMachines().mint({
       candyMachine,
       collectionUpdateAuthority: candyMachine.authorityAddress,
     });
 
     setNft(nft);
+  } catch (err){
+    
+  }
   };
 
   return (
     <div>
-      <select onChange={onClusterChange} className={styles.dropdown}>
-        <option value="mainnet">Mainnet</option>
-        <option value="devnet">Devnet</option>
-        <option value="testnet">Testnet</option>
-      </select>
       <div>
         <div className={styles.container}>
             <div className={styles.nftPreview}>
