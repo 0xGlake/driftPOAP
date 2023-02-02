@@ -68,26 +68,17 @@ export const MintNFTs = ({ onClusterChange }) => {
       </select>
       <div>
         <div className={styles.container}>
-          <h1 className={styles.title}>NFT Mint Address</h1>
-          <div className={styles.nftForm}>
-            <input
-              type="text"
-              value={nft ? nft.mint.address.toBase58() : ""}
-              readOnly
-            />
-            <button onClick={onClick} disabled={disableMint}>
-              mint NFT
-            </button>
-          </div>
-          {nft && (
             <div className={styles.nftPreview}>
-              <h1>{nft.name}</h1>
-              <img
-                src={nft?.json?.image || "/fallbackImage.jpg"}
+              <img className={styles.nftImage}
+                src={"/POAP.png"}
                 alt="The downloaded illustration of the provided NFT address."
               />
+              <div className={styles.nftForm}>
+                <button onClick={onClick} disabled={disableMint}>
+                  MINT NFT!
+                </button>
+              </div>
             </div>
-          )}
         </div>
       </div>
     </div>
