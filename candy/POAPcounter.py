@@ -6,11 +6,11 @@ result = ""
 while count < 333:
   current = '''
       "{}": {{
-      "name": "Summer Camp Shark Tank POAP",
-      "image_hash": "dd7db7b28dff70ec2d94c4bb5120124dfdc32c955cafca6a6d4599c493ea642f",
-      "image_link": "https://arweave.net/FNieJLTDjKHjTxzIHukBuYpXv3vUuY23FSQZ0FAAfVQ?ext=png",
-      "metadata_hash": "37dc608500fca0b869a69e19ff78acbf542d1049d623f8c46724df47f0cab247",
-      "metadata_link": "https://arweave.net/3brze0si1CQb6ZKql5MRQ-juoB4OagcQbIHESKNOb1Y",
+      "name": "Inside NFTs and DAOs POAP",
+      "image_hash": "713d0c06b9ee16dbc37b421071c33883519f8164e6fe3fd31edb87110866a8dd",
+      "image_link": "https://arweave.net/FfdUSEX_6NZKhn18fBbLFl_fo4IxjrShO0xa5qMcoVw?ext=png",
+      "metadata_hash": "affb42ed6da94b2f79bfc086a3ceb9367d638a07acbf7c53cfa76a8d6ec40fa4",
+      "metadata_link": "https://arweave.net/gKR2GWTlFxAGCOtE0xooLi0t1n4XbvfBzEm7dSdBtZk",
       "onChain": false
     }},'''.format(count)
 
