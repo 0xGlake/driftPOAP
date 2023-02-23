@@ -3,6 +3,9 @@ import { useMetaplex } from "./useMetaplex";
 import { useState } from "react";
 import { useWallet } from "@solana/wallet-adapter-react";
 import { PublicKey } from "@solana/web3.js";
+import { toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+
 
 export const MintNFTs = ({ onClusterChange }) => {
   const { metaplex } = useMetaplex();
@@ -52,16 +55,26 @@ export const MintNFTs = ({ onClusterChange }) => {
 
   const onClick = async () => {
     try {
-    const { nft } = await metaplex.candyMachines().mint({
-      candyMachine,
-      collectionUpdateAuthority: candyMachine.authorityAddress,
+      const { nft } = await metaplex.candyMachines().mint({
+        candyMachine,
+        collectionUpdateAuthority: candyMachine.authorityAddress,
+      });
+      
+      toast.info("Attempting to mint, please wait", {
+        position: toast.POSITION.BOTTOM_LEFT
+      });
+      
+      setNft(nft);
+      toast.success("Mint success", {
+      position: toast.POSITION.BOTTOM_LEFT
     });
 
-    setNft(nft);
   } catch (err){
-    
+    toast.error("Error: " + err.toString(), {
+      position: toast.POSITION.BOTTOM_LEFT
+    });
   }
-  };
+};
 
   return (
     <div>

@@ -17,6 +17,9 @@ import { clusterApiUrl } from '@solana/web3.js';
 import { MetaplexProvider } from '../components/MetaplexProvider';
 import { MintNFTs } from '../components/MintNFTs';
 import '@solana/wallet-adapter-react-ui/styles.css';
+import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+
 
 export default function Home() {
 
@@ -63,6 +66,7 @@ export default function Home() {
             <WalletMultiButton />
             <MintNFTs onClusterChange={handleChange} />
           </div>
+        <ToastContainer />
         </MetaplexProvider>
         </WalletModalProvider>
       </WalletProvider>
